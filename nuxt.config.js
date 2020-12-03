@@ -13,7 +13,7 @@ export default {
 
   css: [],
 
-  plugins: ['~/plugins/qr'],
+  plugins: [{ src: '~/plugins/qr' }],
 
   components: true,
 
