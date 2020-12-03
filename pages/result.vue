@@ -11,7 +11,10 @@
         <b-card-body>
           <p class="decode-result">
             Result:
-            <b>{{ result }}</b>
+            <b>
+              <a v-if="isUrl" :href="result" target="_blank">{{ result }}</a>
+              <span v-else>{{ result }}</span>
+            </b>
           </p>
         </b-card-body>
       </b-card>
@@ -20,14 +23,17 @@
 </template>
 
 <script>
+import isUrl from 'is-url'
 export default {
   data() {
     return {
+      isUrl: false,
       result: null
     }
   },
   mounted() {
     this.result = this.$route.query.r
+    this.isUrl = isUrl(this.result)
   }
 }
 </script>

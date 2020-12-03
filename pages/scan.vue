@@ -9,10 +9,7 @@
         class="col-12 col-md-8 col-lg-5 mx-auto"
       >
         <b-card-body>
-          <p class="decode-result">
-            Last result:
-            <b>{{ result }}</b>
-          </p>
+          <p class="decode-result">Scan a QR code</p>
           <qrcode-stream @decode="onDecode" @init="onInit" />
         </b-card-body>
       </b-card>

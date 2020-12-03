@@ -31,6 +31,6 @@ export default {
 
   build: {},
   router: {
-    middleware: ['authentication', 'redirect']
+    middleware: ['authentication']
   }
 }
